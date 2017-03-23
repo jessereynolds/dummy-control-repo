@@ -1,5 +1,5 @@
 class profile::soe::sysctl (
-  Hash $settings = {'a' => 'a', 'b' =>  'b'},
+  Hash $settings  = hiera_hash('profile::soe::sysctl::settings'),
   Hash $overrides = {},
 ) {
   $sysctl_settings = $settings + $overrides
